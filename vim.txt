@@ -2,13 +2,28 @@
 (file and window)
 :e {file} :open {file}
 
-(move)
+(operater)
+d :delete
+c :change
+v :choice
+gu/gU :converte into lowercase/uppercase
+(text_object)
+a/i +  ( or b,{ or B,[,<,t,",',`,s,p  :inner/include + (,{,[,<,tag,",',`,sentence,paragraph
+
+(motion)
 h/j/k/l :move right/under/orver/left
 {(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) word(include delimiter yes/no)
 (^/0)/(g_/$) :jump to first line/(include leading space)
 gg/G :jump to first/line of the document
 fx/Fx :jump to next/previous x
   ;/, :repeat fx/Fx
+% :jump to pair of (,{,[
+
+(edit)
+rx  :replace x
+J :join sentence(remove LF$)
+x :cut
+~ :interconvert lowercase,uppercase
 
 (into insert)
 (i/I)/(a/A) :(lead)/(end) of cursor/sentence
