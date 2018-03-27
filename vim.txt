@@ -1,0 +1,4 @@
+[ Vim cheat sheat ]
+(file and window)
+:e {file} :open {file}
+:
