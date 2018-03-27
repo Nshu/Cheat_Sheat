@@ -4,7 +4,12 @@
 
 (move)
 h/j/k/l :move right/under/orver/left
-w/W :move to lead of word/(include delimiter)
-e/E :move to end of word/(include delimiter)
-b/B :back to lead of word/(include delimiter)
-^/0 :move to lead of line/(include leading word)
+{(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) word(include delimiter yes/no)
+(^/0)/(g_/$) :jump to first line/(include leading space)
+gg/G :jump to first/line of the document
+fx/Fx :jump to next/previous x
+  ;/, :repeat fx/Fx
+
+(into insert)
+(i/I)/(a/A) :(lead)/(end) of cursor/sentence
+o/O :append line bellow/above
