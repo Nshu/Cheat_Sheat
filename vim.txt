@@ -1,4 +1,10 @@
 [ Vim cheat sheat ]
 (file and window)
 :e {file} :open {file}
-:
+
+(move)
+h/j/k/l :move right/under/orver/left
+w/W :move to lead of word/(include delimiter)
+e/E :move to end of word/(include delimiter)
+b/B :back to lead of word/(include delimiter)
+^/0 :move to lead of line/(include leading word)
