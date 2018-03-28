@@ -1,12 +1,15 @@
 [ Vim cheat sheat ]
 (file and window)
 :e {file} :open {file}
-
+:tabnew {file}  :open {file} in another tab
+:tabn/tabN  :move to right/left tab
+:
 (operater)
 d :delete
 c :change
 v :choice
 gu/gU :converte into lowercase/uppercase
+
 (text_object)
 a/i +  ( or b,{ or B,[,<,t,",',`,s,p  :inner/include + (,{,[,<,tag,",',`,sentence,paragraph
 
@@ -20,10 +23,15 @@ fx/Fx :jump to next/previous x
 % :jump to pair of (,{,[
 
 (edit)
-rx  :replace x
+rx/R  :replace x/into replace mode
 J :join sentence(remove LF$)
 x :cut
 ~ :interconvert lowercase,uppercase
+D :cut between cursor to end of line (=d$)
+p/P :paste forward/back
+Y :yank sentence
+dd  :delete sentence
+
 
 (into insert)
 (i/I)/(a/A) :(lead)/(end) of cursor/sentence
