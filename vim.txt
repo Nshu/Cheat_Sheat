@@ -1,9 +1,15 @@
 [ Vim cheat sheat ]
-(file and window)
+(file and tab and window )
 :e {file} :open {file}
 :tabnew {file}  :open {file} in another tab
 :tabn/tabN  :move to right/left tab
+:Explore  :open Explore
+
+(buffer)
+:ls :list all buffer
+:b {n}  :Display {n} buffer
 :
+
 (operater)
 d :delete
 c :change
@@ -22,6 +28,10 @@ fx/Fx :jump to next/previous x
   ;/, :repeat fx/Fx
 % :jump to pair of (,{,[
 
+(sub motion):Not recommended to use with operater
++/- :(= j^/k^)
+
+
 (edit)
 rx/R  :replace x/into replace mode
 J :join sentence(remove LF$)
@@ -32,7 +42,13 @@ p/P :paste forward/back
 Y :yank sentence
 dd  :delete sentence
 
-
 (into insert)
 (i/I)/(a/A) :(lead)/(end) of cursor/sentence
 o/O :append line bellow/above
+cc  :delete sentence
+
+(Scroll)
+C-f :next page
+C-b :prev page
+C-d :next half page
+C-u :prev half page
