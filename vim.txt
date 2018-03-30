@@ -1,5 +1,5 @@
 [ Vim cheat sheat ]
-(file and tab and window )
+(file & tab & window )
 :e {file} :open {file}
 :tabnew {file}  :open {file} in another tab
 :tabn/tabN  :move to right/left tab
@@ -8,7 +8,7 @@
 (buffer)
 :ls :list all buffer
 :b {n}  :Display {n} buffer
-:
+:only :
 
 (operater)
 d :delete
@@ -24,13 +24,15 @@ h/j/k/l :move right/under/orver/left
 {(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) word(include delimiter yes/no)
 (^/0)/(g_/$) :jump to first line/(include leading space)
 gg/G :jump to first/line of the document
-fx/Fx :jump to next/previous x
+fx/Fx :jump to next/previous x in current sentence
   ;/, :repeat fx/Fx
 % :jump to pair of (,{,[
 
+(serch):This can use for motion too.
+/{str} / ?{str} :serch {str} down/up
+*/# :search word under cursor down/up
 (sub motion):Not recommended to use with operater
 +/- :(= j^/k^)
-
 
 (edit)
 rx/R  :replace x/into replace mode
@@ -48,7 +50,4 @@ o/O :append line bellow/above
 cc  :delete sentence
 
 (Scroll)
-C-f :next page
-C-b :prev page
-C-d :next half page
-C-u :prev half page
+C-(f/b)/(d/u)/(e/y) :(next/prev) one/half/split_by_sentence page
