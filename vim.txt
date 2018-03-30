@@ -1,14 +1,21 @@
 [ Vim cheat sheat ]
-(file & tab & window )
+(file & tab)
 :e {file} :open {file}
 :tabnew {file}  :open {file} in another tab
 :tabn/tabN  :move to right/left tab
 :Explore  :open Explore
 
+(window)
+C-w + C-s/v :split window in a transverse/vertical direction
+C-w + C-w :move to next window
+C-w + C-h/j/k/l :move among windows
+C-w + C-o :close all windows without current one
+C-w + C- +/-,</>  :change hight,width of current window by word-width
+
 (buffer)
 :ls :list all buffer
 :b {n}  :Display {n} buffer
-:only :
+:bw {n} :Delete {n} buffer
 
 (operater)
 d :delete
