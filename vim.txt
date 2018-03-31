@@ -28,7 +28,7 @@ a/i +  ( or b,{ or B,[,<,t,",',`,s,p  :inner/include + (,{,[,<,tag,",',`,sentenc
 
 (motion)
 h/j/k/l :move right/under/orver/left
-{(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) word(include delimiter yes/no)
+{(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) char of word(include delimiter yes/no)
 (^/0)/(g_/$) :jump to first line/(include leading space)
 gg/G :jump to first/line of the document
 fx/Fx :jump to next/previous x in current sentence
