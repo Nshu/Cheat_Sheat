@@ -21,6 +21,7 @@ C-w + C- +/-,</>  :change hight,width of current window by word-width
 d :delete
 c :change
 v :choice
+</> :outdent/indent
 gu/gU :converte into lowercase/uppercase
 
 (text_object)
