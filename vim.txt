@@ -32,7 +32,7 @@ h/j/k/l :move right/under/orver/left
 {(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) char of word(include delimiter yes/no)
 (^/0)/(g_/$) :jump to first line/(include leading space)
 gg/G :jump to first/line of the document
-fx/Fx :jump to next/previous x in current sentence
+fx/Fx,tx/Tx :jump to next/previous lead of,just before x in current sentence
   ;/, :repeat fx/Fx
 % :jump to pair of (,{,[
 
