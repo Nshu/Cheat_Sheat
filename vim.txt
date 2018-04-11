@@ -59,3 +59,6 @@ cc  :delete sentence
 
 (Scroll)
 C-(f/b)/(d/u)/(e/y) :(next/prev) one/half/split_by_sentence page
+
+(check status)
+:scriptnames  :print loaded plugins
