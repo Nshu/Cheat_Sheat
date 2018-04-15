@@ -1,0 +1,17 @@
+See Browser support for detailed information.
+
+If you have trouble making a request to another domain (a different subdomain or port number also constitutes another domain), please familiarize yourself with all the intricacies and limitations of CORS requests.
+Because CORS requires participation of the server by implementing specific HTTP response headers, it is often nontrivial to set up or debug.
+CORS is exclusively handled by the browser's internal mechanisms which this polyfill cannot influence.
+If you believe you found a bug with how fetch behaves in Chrome or Firefox, please don't open an issue in this repository.
+This project is a polyfill, and since Chrome and Firefox both implement the window.fetch function natively, no code from this project actually takes any effect in these browsers.
+CORS is exclusively handled by the browser's internal mechanisms which this polyfill cannot influence.
+
+If you have trouble maintaining the user's session or CSRF protection through fetch requests, please ensure that you've read and understood the Sending cookies section.
+fetch doesn't send cookies unless you ask it to.
+
+This project doesn't work under Node.js environments.
+It's mean
+If you believe you found a bug with how fetch behaves in Chrome or Firefox, please don't open an issue in this repository.
+This project is a polyfill, and since Chrome and Firefox both implement the window.fetch function natively, no code from this project actually takes any effect in these browsers.
+CORS is exclusively handled by the browser's internal mechanisms which this polyfill cannot influence.

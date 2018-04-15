@@ -1,64 +1,87 @@
 [ Vim cheat sheat ]
 (file & tab)
-:e {file} :open {file}
-:tabnew {file}  :open {file} in another tab
-:tabn/tabN  :move to right/left tab
-:Explore  :open Explore
+ :e {file} 	:open {file}
+ :tabnew {file}  	:open {file} in another tab
+ :tabn/tabN  	:move to right/left tab
+ :Explore  	:open Explore
 
-(window)
-C-w + C-s/v :split window in a transverse/vertical direction
-C-w + C-w :move to next window
-C-w + C-h/j/k/l :move among windows
-C-w + C-o :close all windows without current one
-C-w + C- +/-,</>  :change hight,width of current window by word-width
+o(window)
+ C-w + C-s/v 	:split window in a transverse/vertical direction
+ C-w + C-w 	:move to next window
+ C-w + C-h/j/k/l 	:move among windows
+ C-w + C-o 	:close all windows without current one
+ C-w + C- +/-,</>  	:change hight,width of current window by word-width
 
 (buffer)
-:ls :list all buffer
-:b {n}  :Display {n} buffer
-:bw {n} :Delete {n} buffer
+ :ls 	:list all buffer
+ :b {n}  	:Display {n} buffer
+ :bw {n} 	:Delete {n} buffer
 
 (operater)
-d :delete
-c :change
-v :choice
-</> :outdent/indent
-gu/gU :converte into lowercase/uppercase
+ d 	:delete
+ c 	:change
+ v 	:choice
+ </> 	:outdent/indent
+ gu/gU,g~ 	:converte into lowercase/uppercase, toggle lowercase and uppercase.
 
 (text_object)
-a/i +  ( or b,{ or B,[,<,t,",',`,s,p  :inner/include + (,{,[,<,tag,",',`,sentence,paragraph
+ a/i +  ( or b,{ or B,[,<,t,",',`,s,p  	:inner/include + (,{,[,<,tag,",',`,sentence,paragraph
 
 (motion)
-h/j/k/l :move right/under/orver/left
-{(w/W)/(e/E)}/{(b/B)/(ge/gE)} :{move}/{back} to (first)/(last) char of word(include delimiter yes/no)
-(^/0)/(g_/$) :jump to first line/(include leading space)
-gg/G :jump to first/line of the document
-fx/Fx,tx/Tx :jump to next/previous lead of,just before x in current sentence
-  ;/, :repeat fx/Fx
-% :jump to pair of (,{,[
+ h/j/k/l 	:move right/under/orver/left
+ {(w/W)/(e/E)}/{(b/B)/(ge/gE)} 	:{move}/{back} to (first)/(last) char of word(include delimiter yes/no)
+ (^/0)/(g_/$) 	:jump to first line/(include leading space)
+ gg/G 	:jump to first/line of the document
+ fx/Fx,tx/Tx 	:jump to next/previous lead of,just before x in current sentence
+   ;/, 	:repeat fx/Fx
+ % 	:jump to pair of (,{,[
 
 (serch):This can use for motion too.
-/{str} / ?{str} :serch {str} down/up
-*/# :search word under cursor down/up
-(sub motion):Not recommended to use with operater
-+/- :(= j^/k^)
+ /{str} / ?{str} 	:serch {str} down/up
+ */# 	:search word under cursor down/up
+(sub motion)	:Not recommended to use with operater
+ +/- 	:(= j^/k^)
 
 (edit)
-rx/R  :replace x/into replace mode
-J :join sentence(remove LF$)
-x :cut
-~ :interconvert lowercase,uppercase
-D :cut between cursor to end of line (=d$)
-p/P :paste forward/back
-Y :yank sentence
-dd  :delete sentence
+ rx/R  	:replace x/into replace mode
+ J 	:join sentence(remove LF$)
+ x 	:cut
+ ~ 	:interconvert lowercase,uppercase
+ D 	:cut between cursor to end of line (=d$)
+ p/P 	:paste forward/back
+ Y 	:yank sentence
+ dd  	:delete sentence
+ C-a/c-x  	:search number between cursor to end of current line and increase/decrease number	
 
 (into insert)
-(i/I)/(a/A) :(lead)/(end) of cursor/sentence
-o/O :append line bellow/above
-cc  :delete sentence
+ (i/I)/(a/A) 	:(lead)/(end) of cursor/sentence
+ o/O 	:append line bellow/above
+ cc  	:delete sentence
 
 (Scroll)
-C-(f/b)/(d/u)/(e/y) :(next/prev) one/half/split_by_sentence page
+ C-(f/b)/(d/u)/(e/y) 	:(next/prev) one/half/split_by_sentence page
+
+(visual mode)
+ gv	:selest last visual selected range again
+ o	:move to another edge of selected range
+ rx	:replace selected range to {x} 
+
+(Ex command)
+ :[range]d/y [x]	:delete/yank text from range to register x
+ :[line]p [x]	:put text from reg x under line
+ :[range]t/m {address}	:copy/move text from range under line
+ :[range]join	:join line in range
+ :[range]normal	{cmd}	:exe cmd to each line in range
+ :[range]grobal/{pattern}/[cmd]	:exe cmd to each line matched pattern in range
+
+(shell)
+ :shell	:open shell. type "exit" to exit
+ :!{cmd}	:exe shell cmd
+ :r[ead] !{cmd}	:exe shell cmd and insert general output to under current line
 
 (check status)
-:scriptnames  :print loaded plugins or setting_files
+ :scriptnames  	:print loaded plugins or setting_files
+
+(tips)
+ <C-v>{dec}/{hex},{key}	:insert character on decimal/hex number, from keybord directly
+ <C-k>{char1}{char2}	:insert character expressed by digraph
