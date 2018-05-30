@@ -1,11 +1,15 @@
 [ Vim cheat sheat ]
 (file & tab)
  :e {file} 	:open {file}
+ ;set path+={path}	:add {path} into path
+ :set suffixesadd+={ext}	:add {ext} to complement file name
+ ;find {file}	:find {file} from path
+ gf	:open file named the word under cursor
  :tabnew {file}  	:open {file} in another tab
  :tabn/tabN  	:move to right/left tab
  :Explore  	:open Explore
 
-o(window)
+(window)
  C-w + C-s/v 	:split window in a transverse/vertical direction
  C-w + C-w 	:move to next window
  C-w + C-h/j/k/l 	:move among windows
@@ -36,9 +40,21 @@ o(window)
    ;/, 	:repeat fx/Fx
  % 	:jump to pair of (,{,[
 
+(jump)
+ C-o	:undo cursor position
+ g;/g,	:back/fowd change list
+ 
+(mark)
+ ./^	:last change/insert
+ 
+
+
 (serch):This can use for motion too.
- /{str} / ?{str} 	:serch {str} down/up
+ /{str} / ?{str} [opt] 	:serch {str} down/up
+  \c/\C	:treat uppercase and lowercase as same/diffirent
+  \v	:
  */# 	:search word under cursor down/up
+ 
 (sub motion)	:Not recommended to use with operater
  +/- 	:(= j^/k^)
 
@@ -57,6 +73,7 @@ o(window)
  (i/I)/(a/A) 	:(lead)/(end) of cursor/sentence
  o/O 	:append line bellow/above
  cc  	:delete sentence
+ gi	:jump to last insert position
 
 (Scroll)
  C-(f/b)/(d/u)/(e/y) 	:(next/prev) one/half/split_by_sentence page
@@ -79,9 +96,13 @@ o(window)
  :!{cmd}	:exe shell cmd
  :r[ead] !{cmd}	:exe shell cmd and insert general output to under current line
 
+(register)
+ _	:black hole
+ 
 (check status)
  :scriptnames  	:print loaded plugins or setting_files
 
 (tips)
  <C-v>{dec}/{hex},{key}	:insert character on decimal/hex number, from keybord directly
  <C-k>{char1}{char2}	:insert character expressed by digraph
+ ;set paste/paste!	;tell vim to use system level paste command.
