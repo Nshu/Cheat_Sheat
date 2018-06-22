@@ -10,7 +10,7 @@
  :Explore  	:open Explore
 
 (window)
- C-w + C-s/v 	:split window in a transverse/vertical direction
+ C-w + s/v 	:split window in a transverse/vertical direction
  C-w + C-w 	:move to next window
  C-w + C-h/j/k/l 	:move among windows
  C-w + C-o 	:close all windows without current one
