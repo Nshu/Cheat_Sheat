@@ -19,7 +19,7 @@
 (buffer)
  :ls 	:list all buffer
  :b {n}  	:Display {n} buffer
- :bw {n} 	:Delete {n} buffer
+ :bd {n} 	:Delete {n} buffer
 
 (operater)
  d 	:delete
