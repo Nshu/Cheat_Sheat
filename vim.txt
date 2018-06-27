@@ -50,7 +50,7 @@
 
 
 (serch):This can use for motion too.
- /{str} / ?{str} [opt] 	:serch {str} down/up
+ /{str} / ?{str:} [opt] 	:serch {str} down/up
   \c/\C	:treat uppercase and lowercase as same/diffirent
   \v	:
   \zs/\ze :start/end match
