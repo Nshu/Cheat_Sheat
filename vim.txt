@@ -53,6 +53,7 @@
  /{str} / ?{str} [opt] 	:serch {str} down/up
   \c/\C	:treat uppercase and lowercase as same/diffirent
   \v	:
+  \zs/\ze :start/end match
  */# 	:search word under cursor down/up
  
 (sub motion)	:Not recommended to use with operater
