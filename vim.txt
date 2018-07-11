@@ -106,4 +106,8 @@
 (tips)
  <C-v>{dec}/{hex},{key}	:insert character on decimal/hex number, from keybord directly
  <C-k>{char1}{char2}	:insert character expressed by digraph
- ;set paste/paste!	;tell vim to use system level paste command.
+ :set paste/paste!	;tell vim to use system level paste command.
+ :set foldmethod=marker :activate foldmethod
+  {{{ FOLD_CONTENT }}}
+  za,zm,zr : fold togle,close all,open all
+  VISUAL_SELECT zf : add "{{{ to end of first line , "}}} to end of last line. 
