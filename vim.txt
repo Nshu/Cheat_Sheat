@@ -52,9 +52,25 @@
 (serch):This can use for motion too.
  /{str} / ?{str:} [opt] 	:serch {str} down/up
   \c/\C	:treat uppercase and lowercase as same/diffirent
-  \v	:
-  \zs/\ze :start/end match
+  \w/\W :include/exclude [0-9a-zA-Z_]
+  \d/\D :include/exclude [0-9]
+  (X)Y\1 :match XYX. if not reusing X, add % front of (.
+  \v	:verymagic switch. all char without \w have effect.
+  \V :nomagic switch. all char don't have effect.
+  </>:begin/end of word.
+  \zs/\ze :start/end match. use in replace.
+  \s/\S :include/exclude blank.
+  \_s :match blank and \r\n.
+  escape({string},  {chars}) :escape {chars} in {string}.
+  */+/{-n,m} :pattern repeat more than 0/ 1 /n, less than m.
+  {n} :pattern repeat n times.
+  [^X] :exclude X.
  */# 	:search word under cursor down/up
+ 
+ (replace char)
+  \={Vim  script}: result of {Vim  script}.
+  \0/\N :all match/ Nth sub match. 
+  \=@{reg} :reg contents
  
 (sub motion)	:Not recommended to use with operater
  +/- 	:(= j^/k^)
